@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/output.css" />
+  </head>
+
+  <body>
+    <!--Page Content-->
+    <header class="flex flex-col bg-faintblue">
+      <!-- Main Navigation -->
+      <div class="flex justify-between items-center">
+        <div class="mt-5 ml-12">
+          <img src="../../assets/logo-blue-160x160-1.png" alt="ebq logo" />
+        </div>
+
+        <div
+          id="myBtn"
+          class="bg-lightblue text-center items-center rounded-full py-3 w-44 mt-5 mr-12"
+        >
+          <button class="text-base font-bold font-ebq text-white">
+            CONTACT US
+          </button>
+        </div>
+      </div>
+
+      <section class="flex flex-col items-center lg:text-left lg:flex-row">
+        <div
+          class="flex basis-1/2 flex-col text-center items-center p-16 pt-0 lg:text-left"
+        >
+          <h3 class="text-5xl leading-8 w-full lg:w-1/2 text-black pb-12">
+            Integrated
+            <span class="font-ebq font-bold">Marketing Services</span>
+          </h3>
+          <p class="font-ebq w-full lg:w-1/2 lg:text-md">
+            We turn your marketing plans into action by building on your ideas
+            and executing initiatives alongside you and your team. Get a
+            complete department that can pivot to different areas of marketing
+            based on your needs.
+          </p>
+        </div>
+        <div id="insert" class="flex flex-wrap basis-1/4"></div>
+      </section>
+    </header>
+
+    <main class="flex mx-auto flex-col">
+      <!-- Main Page Content -->
+
+      <section
+        class="flex flex-col flex-1 shrink-0 items-center py-16 mt-6 lg:text-left lg:flex-row-reverse"
+      >
+        <div class="flex flex-1 pt-0 items-center justify-center">
+          <img
+            width="500px"
+            class=" "
+            src="../../assets/Marketing_Tools.svg"
+            alt="Marketing Tools svg"
+          />
+        </div>
+        <aside
+          class="flex basis-1/2 flex-col text-center items-center lg:text-left p-16 pt-0"
+        >
+          <h3 class="text-5xl leading-8 w-full lg:w-1/2 text-black pb-12">
+            We&rsquo;re experts with
+            <span class="font-ebq font-bold">modern marketing tools,</span> so
+            you don&rsquo;t have to be!
+          </h3>
+          <p class="font-ebq w-full lg:w-1/2 lg:text-md">
+            With hands-on experience in B2B&rsquo;s most innovative apps and
+            tools, we take a data-driven approach to continually improve
+            prospect engagement. Whether we work directly out of your platform
+            or provide our insights manually, you always get full visibility
+            into the process.
+          </p>
+        </aside>
+      </section>
+
+      <section
+        class="flex flex-1 flex-col-reverse justify-center items-center py-16 lg:text-left lg:flex-row"
+      >
+        <div
+          class="flex items-center justify-center flex-1 basis-1/2 pt-0 pr-0"
+        >
+          <img
+            width="500px"
+            src="../../assets/Complete-Department-Marketing.png"
+            alt="Complete Department Marketing"
+          />
+        </div>
+        <aside
+          class="flex flex-1 basis-1/2 flex-col text-center items-center lg:text-left p-16 pt-0"
+        >
+          <h3 class="text-5xl leading-8 w-full lg:w-1/2 text-black pb-12">
+            <span class="font-ebq font-bold">The best way</span> to build a
+            marketing team
+          </h3>
+          <p class="font-ebq w-full lg:w-1/2 lg:text-md">
+            With EBQ, you&rsquo;re not just hiring a marketing specialist.
+            You&rsquo;re getting an entire marketing department at a fraction of
+            the cost and effort of hiring internally.
+          </p>
+          <br />
+          <p class="font-ebq w-full lg:w-1/2 lg:text-md">
+            For each project, we provide: a Success Manager to drive high-level
+            strategy, a Project Manager to oversee day-to-day operations, and
+            one or more Specialists working diligently to amplify your brand.
+          </p>
+        </aside>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="flex items-center flex-col text-center bg-darkblue py-16 mt-6"
+      >
+        <h3 class="text-5xl leading-8 text-white py-12 px-6">
+          <span class="font-ebq">Looking to take your</span>
+          <span class="font-bold font-ebq"> marketing to the next level? </span>
+        </h3>
+        <div>
+          <div
+            id="myBtn"
+            class="bg-orange text-center items-center rounded-full py-3 w-44"
+          >
+            <button class="text-base font-bold font-ebq text-darkblue">
+              CONTACT US
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      // Event listener JS goes here
+      const el = document.getElementById("myBtn")
+      console.log(el.className) // sanity check
+      // first event listener
+      el.addEventListener("click", function () {
+        // create wrapper div for the button
+        let wrapperDiv = document.createElement("div")
+        // add required classes to the div for clarity
+        let divList = wrapperDiv.classList
+        divList.add(
+          "bg-lightblue",
+          "text-center",
+          "items-center",
+          "rounded-full",
+          "py-3",
+          "w-44",
+          "mt-5",
+          "mr-12"
+        )
+
+        let button = document.createElement("button")
+        // add the required tailwind classes to the button
+        let list = button.classList
+        list.add("text-base", "font-bold", "font-ebq", "text-white")
+        // create the text node for the button
+        let txt = document.createTextNode("CONTACT US")
+        // grab the empty div where you are going to insert
+        let emptyDiv = document.getElementById("insert")
+        // append the button to the wrapperDiv
+        wrapperDiv.appendChild(button)
+        // append the text node to the button
+        button.appendChild(txt)
+
+        // Append the button to the div
+        document.getElementById("insert").appendChild(wrapperDiv)
+      })
+    </script>
+  </body>
+</html>
